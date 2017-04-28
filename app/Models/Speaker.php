@@ -42,7 +42,7 @@ class Speaker extends Model
     {
         $value = str_replace(' ', '', $value);
         if (strlen($value) and !starts_with($value, '@')) {
-            return $this->attributes['twitter_name'] = '@' . $value;
+            return $this->attributes['twitter_name'] = $value;
         }
 
         return $this->attributes['twitter_name'] = $value;
